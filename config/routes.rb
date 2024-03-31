@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :events # ルーティングをまとめて設定(index、new、create、show、edit、update、destroyアクションに対するルーティングを設定してくれる。)
+  get "/" => 'events#index' # トップページの設定にはrootが用いられる
+  
 end

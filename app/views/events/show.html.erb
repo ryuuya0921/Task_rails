@@ -1,0 +1,18 @@
+<div class="event-details">
+
+
+
+<div class="back-index">
+  <%= link_to '← 一覧に戻る', events_path %>
+</div>
+
+  <div class="title-with-edit">
+    <h1><%= @event.title %></h1>
+    <%= link_to '編集', edit_event_path(@event) %>
+  </div>
+  
+  <p>開始日: <%= @event.start_date %></p>
+  <p>終了日: <%= @event.end_date %></p>
+  <p>終日: <%= @event.is_all_day ? 'はい' : 'いいえ' %></p>
+  <p>スケジュールメモ: <%= @event.memo %></p>
+</div>
