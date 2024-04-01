@@ -23,7 +23,8 @@ class EventsController < ApplicationController
       flash[:notice] = 'イベントが作成されました'
       redirect_to events_path
     else
-      render :new, alert: '保存に失敗しました'
+      flash.now[:alert] = 'イベントの作成に失敗しました'
+      render :new
     end
   end
 

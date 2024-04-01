@@ -8,7 +8,6 @@
   <% end %>
 </div>
 
-
 <table>
   <thead>
     <tr>
@@ -56,5 +55,17 @@
     <p>予定合計: <%= @events.count %>件</p>
     <p>本日の日付: <%= @today.strftime("%Y/%m/%d") %></p>
 </div>
+
+<% if flash[:notice] %>
+  <div class="alert alert-success">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<% if flash[:alert] %>
+  <div class="alert alert-danger">
+    <%= flash[:alert] %>
+  </div>
+<% end %>
 
 </div>
