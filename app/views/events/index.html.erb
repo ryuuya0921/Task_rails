@@ -33,9 +33,9 @@
         <td><%= event.end_date %></td>
 
         <td class="all-day-event">
-        <% if event.is_all_day %>
-          ⚪︎
-        <% end %>
+
+        <%= "○" if event.is_all_day %>
+        
         </td>
 
         <td><%= event.created_at.strftime("%Y/%m/%d %H:%M") %></td><%# 日時の設定 %>
